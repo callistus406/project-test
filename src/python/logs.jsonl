@@ -1,0 +1,15 @@
+{"timestamp":"2025-10-16T10:00:01.123Z","level":"info","requestId":"req-001","event":"user_registered","email":"alice@example.com"}
+{"timestamp":"2025-10-16T10:01:15.456Z","level":"info","requestId":"req-002","event":"login_success","email":"alice@example.com"}
+{"timestamp":"2025-10-16T10:02:30.789Z","level":"warn","requestId":"req-003","event":"login_failed","email":"bob@test.com","reason":"bad_password"}
+{"timestamp":"2025-10-16T10:03:45.012Z","level":"info","requestId":"req-004","event":"user_registered","email":"charlie@domain.com"}
+{"timestamp":"2025-10-16T10:04:00.345Z","level":"warn","requestId":"req-005","event":"login_failed","email":"bob@test.com","reason":"bad_password"}
+{"timestamp":"2025-10-16T10:05:15.678Z","level":"info","requestId":"req-006","event":"login_success","email":"charlie@domain.com"}
+{"timestamp":"2025-10-16T10:06:30.901Z","level":"warn","requestId":"req-007","event":"login_failed","email":"mallory@evil.com","reason":"not_found"}
+{"timestamp":"2025-10-16T10:07:45.234Z","level":"warn","requestId":"req-008","event":"login_failed","email":"bob@test.com","reason":"bad_password"}
+{"timestamp":"2025-10-16T10:08:00.567Z","level":"warn","requestId":"req-009","event":"login_failed","email":"mallory@evil.com","reason":"bad_password"}
+{"timestamp":"2025-10-16T10:09:15.890Z","level":"info","requestId":"req-010","event":"token_refreshed","sub":"alice@example.com"}
+{"timestamp":"2025-10-16T10:10:30.123Z","level":"warn","requestId":"req-011","event":"login_failed","email":"bob@test.com","reason":"bad_password"}
+{"timestamp":"2025-10-16T10:11:45.456Z","level":"warn","requestId":"req-012","event":"login_failed","email":"mallory@evil.com","reason":"bad_password"}
+{"timestamp":"2025-10-16T10:12:00.789Z","level":"info","requestId":"req-013","event":"login_success","email":"bob@test.com"}
+{"timestamp":"2025-10-16T10:13:15.012Z","level":"warn","requestId":"req-014","event":"login_failed","email":"mallory@evil.com","reason":"bad_password"}
+{"timestamp":"2025-10-16T10:14:30.345Z","level":"info","requestId":"req-015","event":"user_registered","email":"diana@company.org"}

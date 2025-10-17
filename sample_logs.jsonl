@@ -1,0 +1,15 @@
+{"event": "user_registered", "email": "alice@example.com", "requestId": "req-001"}
+{"event": "login_success", "email": "alice@example.com", "requestId": "req-002"}
+{"event": "login_failed", "email": "bob@test.com", "reason": "bad_password", "requestId": "req-003"}
+{"event": "login_failed", "email": "bob@test.com", "reason": "bad_password", "requestId": "req-004"}
+{"event": "login_failed", "email": "charlie@demo.org", "reason": "not_found", "requestId": "req-005"}
+{"event": "user_registered", "email": "david@company.com", "requestId": "req-006"}
+{"event": "login_success", "email": "david@company.com", "requestId": "req-007"}
+{"event": "login_failed", "email": "bob@test.com", "reason": "bad_password", "requestId": "req-008"}
+{"event": "token_refreshed", "sub": "alice@example.com", "requestId": "req-009"}
+{"event": "login_success", "email": "alice@example.com", "requestId": "req-010"}
+{"event": "login_failed", "email": "eve@hacker.net", "reason": "bad_password", "requestId": "req-011"}
+{"event": "login_failed", "email": "eve@hacker.net", "reason": "bad_password", "requestId": "req-012"}
+{"event": "login_failed", "email": "eve@hacker.net", "reason": "bad_password", "requestId": "req-013"}
+{"event": "login_failed", "email": "bob@test.com", "reason": "bad_password", "requestId": "req-014"}
+{"event": "login_locked", "email": "bob@test.com", "requestId": "req-015"}

@@ -1,0 +1,40 @@
+{
+  "name": "aws-auth-takehome",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "esbuild src/handlers/auth.ts --bundle --platform=node --outfile=dist/auth.js",
+    "test": "jest",
+    "cdk:bootstrap": "cdk bootstrap",
+    "cdk:deploy": "cdk deploy",
+    "destroy": "cdk destroy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.911.0",
+    "@aws-sdk/client-lambda": "^3.911.0",
+    "@aws-sdk/client-secrets-manager": "^3.911.0",
+    "@aws-sdk/lib-dynamodb": "^3.911.0",
+    "bcryptjs": "^3.0.2",
+    "jose": "^6.1.0",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.156",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^22.7.8",
+    "aws-cdk": "^2.1030.0",
+    "aws-cdk-lib": "^2.220.0",
+    "constructs": "^10.4.2",
+    "esbuild": "^0.25.11",
+    "jest": "^30.2.0",
+    "ts-jest": "^29.4.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
