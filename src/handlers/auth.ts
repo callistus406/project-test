@@ -29,6 +29,7 @@ class RateLimitError extends Error {
   }
 }
 
+//api agetway handler
 export const handler: APIGatewayProxyHandlerV2 = async (
   event: APIGatewayProxyEventV2
 ) => {
@@ -73,7 +74,7 @@ export const handler: APIGatewayProxyHandlerV2 = async (
       });
     }
 
-    // Route handling with exact path matching
+    //  route entry point
     switch (path) {
       case "/register":
         return await register(body, requestId);
@@ -141,9 +142,6 @@ export const handler: APIGatewayProxyHandlerV2 = async (
   }
 };
 
-//
-// ─────────────────────────── REGISTER ───────────────────────────
-//
 async function register(body: any, requestId: string) {
   try {
     const data = parseRegister(body);
@@ -163,7 +161,6 @@ async function register(body: any, requestId: string) {
       });
     }
 
-    // ✅ Invoke the Python password-strength Lambda before proceeding
     try {
       const invokeRes = await lambda.send(
         new InvokeCommand({
@@ -220,7 +217,6 @@ async function register(body: any, requestId: string) {
           err: err.message,
         })
       );
-      // Optional: fail closed (reject registration) if password check fails
       return resp(500, {
         success: false,
         message: "Password validation failed",
@@ -334,7 +330,6 @@ async function login(body: any, requestId: string) {
     if (err instanceof RateLimitError) {
       throw err;
     }
-    // Handle ValidationError from parseLogin with proper issues
     if (err instanceof ValidationError) {
       return resp(400, {
         success: false,
@@ -344,7 +339,6 @@ async function login(body: any, requestId: string) {
         },
       });
     }
-    // Log the actual error for debugging
     console.error(
       JSON.stringify({
         requestId,
