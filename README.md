@@ -15,7 +15,7 @@ cd cdk && npm install && cd ..
 npm run build
 ```
 
-### 3. Bootstrap CDK (execute once)
+### 3. Bootstrap CDK (exec once)
 
 ```bash
 npm run cdk:bootstrap
@@ -37,8 +37,8 @@ Register a new user account.
 
 ```json
 {
-  "email": "user@example.com",
-  "password": "SecurePass123!",
+  "email": "callistus506@gmail.com",
+  "password": "Seererr12344#!",
   "name": "John Doe"
 }
 ```
@@ -73,8 +73,8 @@ Authenticate and receive tokens.
   "success": true,
   "message": "Login successful",
   "payload": {
-    "accessToken": "eyJ...",
-    "refreshToken": "eyJ..."
+    "accessToken": "token",
+    "refreshToken": "token"
   }
 }
 ```
@@ -87,7 +87,7 @@ Refresh access and refresh tokens.
 
 ```json
 {
-  "refreshToken": "eyJ..."
+  "refreshToken": "token"
 }
 ```
 
@@ -98,8 +98,8 @@ Refresh access and refresh tokens.
   "success": true,
   "message": "Token refreshed",
   "payload": {
-    "accessToken": "eyJ...",
-    "refreshToken": "eyJ..."
+    "accessToken": "token",
+    "refreshToken": "token"
   }
 }
 ```
@@ -183,7 +183,7 @@ Metrics are available in CloudWatch:
 - Account lockout events
 - Password validation failures
 
-**DynamoDB Metrics** (automatically generated):
+**DynamoDB Metrics** (auto gen):
 
 - `ConsumedReadCapacityUnits`
 - `ConsumedWriteCapacityUnits`
@@ -208,7 +208,7 @@ python log_summarizer.py sample_logs.jsonl
 
 ## Cleanup
 
-To remove all AWS resources:
+To remove all resources:
 
 ```bash
 npm run destroy
@@ -236,9 +236,9 @@ View Lambda logs in CloudWatch:
 # Find the correct log group name first
 aws logs describe-log-groups --log-group-name-prefix "/aws/lambda/AuthStack" --query 'logGroups[].logGroupName' --output table
 
-# Then use the full name (example from your deployment)
+# use the full name
 aws logs tail "/aws/lambda/AuthStack-AuthFnE7829713-r7aQQFeX05GU" --follow
 
-# Or get recent logs without following
+# r get recent logs without following
 aws logs tail "/aws/lambda/AuthStack-AuthFnE7829713-r7aQQFeX05GU" --since 10m
 ```
